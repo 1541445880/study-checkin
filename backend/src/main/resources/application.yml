@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 注意：密码改成你自己 MySQL 的密码
+    url: "jdbc:mysql://127.0.0.1:3306/study_checkin?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true"
+    username: root
+    password: ${DB_PASSWORD:change-me-local}
+
+mybatis-plus:
+  configuration:
+    # 数据库下划线字段 -> Java 驼峰属性自动映射
+    map-underscore-to-camel-case: true
+    # 控制台打印 SQL，方便排查
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+# 自定义配置：JWT
+jwt:
+  secret: study-checkin-secret-key-2026-please-change-this-in-production
+  expire-days: 7
+
+# 自定义配置：豆包大模型（火山引擎方舟）
+doubao:
+  # 火山方舟 API Key：通过环境变量 ARK_API_KEY 注入，绝不写进代码库
+  api-key: ${ARK_API_KEY:}
+  # 已开通模型：Doubao-Seed-2.1-pro（对话模型）
+  model: "doubao-seed-2-1-pro-260915"
+  # 接口地址（一般不用改）
+  base-url: "https://ark.cn-beijing.volces.com/api/v3"
+
+# 头像等上传文件的本地存储目录（相对后端运行目录）
+upload:
+  path: "./uploads"

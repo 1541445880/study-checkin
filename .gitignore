@@ -1,0 +1,27 @@
+# ===== Java / Maven =====
+backend/target/
+*.class
+*.jar
+
+# ===== 日志 =====
+*.log
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+.hbuilderx/
+
+# ===== uni-app 编译产物 =====
+frontend/unpackage/
+
+# ===== 运行时数据（不入库） =====
+backend/uploads/
+
+# ===== 环境变量（真实密码只放这里） =====
+.env
+docker/.env
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db

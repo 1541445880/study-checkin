@@ -1,0 +1,22 @@
+{
+	"name": "study-checkin",
+	"appid": "__UNI__8045FCE",
+	"description": "学习打卡系统",
+	"versionName": "1.0.0",
+	"versionCode": "100",
+	"transformPx": false,
+	"h5": {
+		"title": "学习打卡",
+		"router": {
+			"mode": "hash",
+			"base": "./"
+		}
+	},
+	"app-plus": {
+		"usingComponents": true
+	},
+	"mp-weixin": {
+		"usingComponents": true
+	},
+	"vueVersion": "2"
+}
