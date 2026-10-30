@@ -41,6 +41,7 @@ services:
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/study_checkin?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true"
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: "${DB_PASSWORD}"
+      ARK_API_KEY: "${ARK_API_KEY}"
       TZ: Asia/Shanghai
     volumes:
       # 上传的图片持久化（对应 jar 里 upload.path=./uploads，即容器内 /app/uploads）

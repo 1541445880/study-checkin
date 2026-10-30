@@ -36,6 +36,8 @@ services:
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/study_checkin?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true"
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: "${DB_PASSWORD}"
+      # 豆包（火山方舟）API Key，从 .env 注入，不进代码库
+      ARK_API_KEY: "${ARK_API_KEY}"
       TZ: Asia/Shanghai
       LANG: C.UTF-8
     volumes:
